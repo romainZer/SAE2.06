@@ -1,6 +1,6 @@
 /*===== Section Start : Variables =====*/
 :root {
-  --background-color1: #f1f1f1; /*Actually used*/
+  --background-color1: #f0f0f0; /*Actually used*/
   --background-color2: #ffffff;
   --accent-color1: #0a84ff; /*Mainly used for buttons*/
   --accent-color1-desaturate: #3684d3; /*Mainly used for buttons*/
@@ -70,6 +70,17 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+@media screen and (max-width: 1000px) {
+  body {
+    background: linear-gradient(
+      360deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 1) 90%,
+      #97d3ef96 100%
+    );
+  }
+}
 /*===== Section End : Page =====*/
 
 /*===== Section Start : Navbar =====*/
@@ -106,7 +117,7 @@ html {
   align-items: center;
 }
 
-#navbar-container li a {
+.navbar-button {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -121,7 +132,7 @@ html {
   transition: all 0.2s ease-in;
 }
 
-#navbar-container li a:hover {
+.navbar-button:hover {
   filter: drop-shadow(0px 0px 1px var(--accent-color2));
 }
 
@@ -130,7 +141,16 @@ html {
   width: 20px;
   margin-right: 5px;
 }
-/*===== Section End : Page =====*/
+
+@media screen and (max-width: 1000px) {
+  #navbar-container {
+    display: none;
+  }
+  .navbar-button {
+    display: none;
+  }
+}
+/*===== Section End : Navbar =====*/
 
 /*===== Section Start : Homepage =====*/
 #homepage-container {
@@ -195,7 +215,7 @@ html {
 }
 /*END ON EFFECTS*/
 
-#homepage-container p {
+#description-container p {
   margin: 16px 0px 0px 60px;
   font-size: 18px;
   font-family: Roboto-Light;
@@ -223,4 +243,96 @@ html {
   box-shadow: 0px 1px 3px var(--accent-color2);
   cursor: pointer;
 }
+
+@media screen and (max-width: 1000px) {
+  #homepage-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px 0px 20px;
+  }
+
+  #homepage-container img {
+    width: 300px;
+  }
+
+  #homepage-container h1 {
+    font-size: 40px;
+  }
+
+  #description-container p {
+    font-size: 16px;
+    padding: 0px;
+    margin: 16px 0px 0px 0px;
+  }
+
+  #title-description {
+    width: 100%;
+  }
+
+  #learnMore-Button {
+    padding: 16px;
+    margin: 40px 0px 0px 0px;
+  }
+
+  #title-description {
+    width: 100%;
+    text-align: center;
+  }
+  #homepage-container h1 {
+    margin: 0;
+  }
+}
 /*===== Section End : Homepage =====*/
+
+/*===== Section Start : OurTeam =====*/
+#ourTeam-container {
+  margin-top: 140px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.ourTeam-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--background-color1);
+  width: 300px;
+  height: 300px;
+  margin-left: 50px;
+  margin-right: 50px;
+  padding: 20px;
+  background-color: var(--background-color1);
+  border-radius: 20px 70px 20px 70px;
+  filter: drop-shadow(0px 0px 2px var(--shadow-color1));
+}
+
+.ourTeam-card img {
+  width: 80px;
+  filter: drop-shadow(0px 2px 2px var(--shadow-color1));
+}
+
+.ourTeam-card p {
+  font-family: Roboto-Regular, Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+
+.bold-text-card {
+  font-family: Roboto-Bold;
+}
+
+@media screen and (max-width: 1200px) {
+  #ourTeam-container {
+    flex-wrap: wrap;
+  }
+
+  .ourTeam-card {
+    padding: 16px;
+    margin: 20px;
+  }
+}
+/*===== Section End : OurTeam =====*/
