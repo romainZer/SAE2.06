@@ -1,0 +1,105 @@
+<!--INDEX PAGE-->
+
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Stylesheet linking-->
+    <link rel="stylesheet" href="css/style.css" />
+    <!--Page title-->
+    <title>UniversalLearn</title>
+  </head>
+
+  <body>
+    <!-- Header of the page >> Contains : Navbar -->
+    <header>
+      <!--Navbar-->
+      <nav id="navbar-container">
+        <img src="images/other/logo_sae2.06_WithOutText.png" alt="" />
+        <ul>
+          <li>
+            <a href="index.html">
+              <img
+                src="images/icons/accueil-white.png"
+                alt="icône d'une maison"
+              />
+              Accueil
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img
+                src="images/icons/avatar-white.png"
+                alt="icône d'un groupe d'utilisateurs"
+              />
+              Nos partenaires
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img
+                src="images/icons/utilisateur-white.png"
+                alt="icône d'un utilisateur"
+              />
+              Nos services
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="homepage-container">
+        <img
+          src="images/other/student.png"
+          alt="illustration d'un étudiant en train de réviser"
+          id="homepage-image"
+        />
+        <div id="title-description">
+          <!--Title-->
+          <h1 id="title-container">
+            <span id="thin-title">Découvrez</span> UniversalLearn<span
+              id="thick-title"
+            ></span>
+          </h1>
+
+          <div id="description-container">
+            <!--Description-->
+            <p>Redécouvrez vos études avec UniversalLearn.</p>
+            <p>
+              UniversalLearn, c'est votre nouvel espace de révision collaboratif
+              pour le partage de notes communautaires
+            </p>
+            <p>
+              Rejoignez dès maintenant des milliers d'utilisateurs et accédez à
+              une bibliothèque de connaissances enrichie chaque jour.
+            </p>
+            <p>
+              Transformez vos révisions, et explorez toutes les possibilités
+              d'UniversalLearn.
+            </p>
+
+            <!--TITLE / IMAGE / DESCIPTION ANIMATION SCRIPT-->
+            <script src="js/script.js"></script>
+
+            <!--Buttons-->
+            <!--ALlows to switch smoothly from the button to the element-->
+            <script>
+              function scrollToElement(elementId) {
+                const element = document.getElementById(elementId);
+                if (element) {
+                  element.scrollIntoView({ behavior: "smooth" });
+                }
+              }
+            </script>
+            <button onclick="scrollToElement('section2')" id="learnMore-Button">
+              En savoir plus
+            </button>
+          </div>
+        </div>
+      </section>
+      <section></section>
+    </main>
+  </body>
+</html>

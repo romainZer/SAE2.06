@@ -1,0 +1,226 @@
+/*===== Section Start : Variables =====*/
+:root {
+  --background-color1: #f1f1f1; /*Actually used*/
+  --background-color2: #ffffff;
+  --accent-color1: #0a84ff; /*Mainly used for buttons*/
+  --accent-color1-desaturate: #3684d3; /*Mainly used for buttons*/
+  --accent-color2: #032140; /*Mainly used for buttons*/
+  --accent-color3: #262629; /*Mainly used for other accents*/
+  --accent-color4: #f0f0f0; /*Mainly used for other accents*/
+  --accent-color5: #fe5c1f;
+  --text-color1: #000000; /*Text color*/
+  --text-color2: #ffffff; /*Text color*/
+
+  --color-start: rgba(255, 205, 167, 1);
+  --color-middle: rgba(254, 92, 31, 1);
+  --color-end: rgba(255, 65, 52, 1);
+
+  --shadow-color1: #1f354b86;
+}
+/*===== Section End : Variables =====*/
+
+/*===== Section Start : Fonts =====*/
+
+/*Roboto-Regular*/
+@font-face {
+  font-family: Roboto-Regular;
+  src: url(../fonts/Roboto/Roboto-Regular.ttf);
+}
+
+/*Roboto-Medium*/
+@font-face {
+  font-family: Roboto-Medium;
+  src: url(../fonts/Roboto/Roboto-Medium.ttf);
+}
+
+/*Roboto-Bold*/
+@font-face {
+  font-family: Roboto-Bold;
+  src: url(../fonts/Roboto/Roboto-Bold.ttf);
+}
+
+/*Roboto-Light*/
+@font-face {
+  font-family: Roboto-Light;
+  src: url(../fonts/Roboto/Roboto-Light.ttf);
+}
+
+/*===== Section End : Fonts =====*/
+
+/*===== Section Start : Page =====*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(
+    360deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 1) 63%,
+    #97d3ef 100%
+  );
+  overflow-x: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: Roboto-Regular, Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+/*===== Section End : Page =====*/
+
+/*===== Section Start : Navbar =====*/
+#navbar-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /*navbar MARGIN*/
+  margin: 20px 50px 20px 50px;
+  padding: 10px 40px 10px 40px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0px 1px 4px var(--shadow-color1);
+}
+
+#navbar-container img {
+  width: 64px;
+}
+
+/*Logo*/
+#navbar-container ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#navbar-container li {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#navbar-container li a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color2);
+  margin: 0px 10px 0px 10px;
+  text-decoration: none;
+  font-size: 15px;
+  background-color: var(--accent-color1-desaturate);
+  padding: 9px;
+  border-radius: 12px;
+  transition: all 0.2s ease-in;
+}
+
+#navbar-container li a:hover {
+  filter: drop-shadow(0px 0px 1px var(--accent-color2));
+}
+
+/*Images inside the navbar buttons*/
+#navbar-container li a img {
+  width: 20px;
+  margin-right: 5px;
+}
+/*===== Section End : Page =====*/
+
+/*===== Section Start : Homepage =====*/
+#homepage-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 50px 90px 0px 90px;
+}
+
+#homepage-container img {
+  width: 500px;
+}
+
+#homepage-image {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 2.5s ease, transform 2.5s ease;
+}
+#homepage-image.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+#title-description {
+  width: 650px;
+}
+
+/*"UNIVERSAL LEARN title*/
+#homepage-container h1 {
+  margin: 30px 0px 0px 60px;
+  font-size: 60px;
+}
+
+/*Thin part of "Découvrez" Universal Learn*/
+#thin-title {
+  font-family: Roboto-Light;
+}
+
+/*Thick part of Découvrez "Universal Learn"*/
+#thick-title {
+  font-family: Roboto-Bold;
+}
+
+/*EFFECT >> Transition of the description container block*/
+#title-container {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+#title-container.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+#description-container {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.5s ease, transform 1s ease;
+}
+#description-container.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+/*END ON EFFECTS*/
+
+#homepage-container p {
+  margin: 16px 0px 0px 60px;
+  font-size: 18px;
+  font-family: Roboto-Light;
+}
+
+#learnMore-Button {
+  margin: 30px 0px 0px 60px;
+  background: linear-gradient(
+    165deg,
+    rgba(255, 205, 167, 1) 0%,
+    rgba(254, 92, 31, 1) 48%,
+    rgba(255, 65, 52, 1) 100%
+  );
+  padding: 20px;
+  border: none;
+  border-radius: 12px;
+  font-family: Roboto-Medium;
+  color: var(--text-color2);
+  font-size: 16px;
+  transition: all 0.5s ease-in-out;
+}
+
+#learnMore-Button:hover {
+  opacity: 85%;
+  box-shadow: 0px 1px 3px var(--accent-color2);
+  cursor: pointer;
+}
+/*===== Section End : Homepage =====*/
