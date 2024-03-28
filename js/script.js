@@ -34,3 +34,12 @@ window.addEventListener("scroll", revealOnScroll);
 
 // Appeler la fonction au chargement initial de la page pour vérifier si les éléments sont déjà visibles
 revealOnScroll();
+
+//================ En savoir plus >> BUTTON ======================//
+
+function scrollToElement(elementId) {
+  const element = document.getElementById(elementId);
+  if (element) {
+    element.scrollIntoView({ behavior: "smooth" });
+  }
+}

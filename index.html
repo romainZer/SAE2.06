@@ -33,7 +33,7 @@
                 src="images/icons/avatar-white.png"
                 alt="icône d'un groupe d'utilisateurs"
               />
-              Nos partenaires
+              Rejoignez nous
             </a>
           </li>
           <li>
@@ -85,21 +85,27 @@
 
             <!--Buttons-->
             <!--ALlows to switch smoothly from the button to the element-->
-            <script>
-              function scrollToElement(elementId) {
-                const element = document.getElementById(elementId);
-                if (element) {
-                  element.scrollIntoView({ behavior: "smooth" });
-                }
-              }
-            </script>
-            <button onclick="scrollToElement('section2')" id="learnMore-Button">
+            <script src="js/script.js"></script>
+            <button
+              onclick="scrollToElement('ourTeam-container')"
+              id="learnMore-Button"
+            >
               En savoir plus
             </button>
           </div>
         </div>
       </section>
-      <section></section>
+
+      <!--Our team section-->
+      <section id="ourTeam-container">
+        <div class="ourTeam-card">
+          <img src="images/other/logo_sae2.06_WithOutText.png" alt="" />
+          <p>
+            Une équipe engagée dans la réalisation d'un produit 100% adapté aux
+            besoins réels des étudiants
+          </p>
+        </div>
+      </section>
     </main>
   </body>
 </html>

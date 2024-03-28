@@ -63,7 +63,7 @@ body {
   );
   overflow-x: hidden;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
   font-family: Roboto-Regular, Arial, Helvetica, sans-serif;
 }
 
