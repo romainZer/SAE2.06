@@ -5,7 +5,7 @@
   --accent-color1: #0a84ff; /*Mainly used for buttons*/
   --accent-color1-desaturate: #3684d3; /*Mainly used for buttons*/
   --accent-color2: #032140; /*Mainly used for buttons*/
-  --accent-color3: #262629; /*Mainly used for other accents*/
+  --accent-color3: ; /*Mainly used for other accents*/
   --accent-color4: #f0f0f0; /*Mainly used for other accents*/
   --accent-color5: #fe5c1f;
   --text-color1: #000000; /*Text color*/
@@ -58,7 +58,7 @@ body {
   background: linear-gradient(
     360deg,
     rgba(255, 255, 255, 1) 0%,
-    rgba(255, 255, 255, 1) 63%,
+    rgba(255, 255, 255, 1) 90%,
     #97d3ef 100%
   );
   overflow-x: hidden;
@@ -158,10 +158,13 @@ html {
   flex-direction: row;
   justify-content: center;
   padding: 50px 90px 0px 90px;
+  height: 100vh;
 }
 
 #homepage-container img {
-  width: 500px;
+  width: 400px;
+  height: fit-content;
+  object-fit: cover;
 }
 
 #homepage-image {
@@ -249,6 +252,7 @@ html {
     flex-direction: column;
     align-items: center;
     padding: 50px 20px 0px 20px;
+    height: 100%;
   }
 
   #homepage-container img {
@@ -275,7 +279,7 @@ html {
   }
 
   #title-description {
-    width: 100%;
+    width: 80%;
     text-align: center;
   }
   #homepage-container h1 {
@@ -284,10 +288,49 @@ html {
 }
 /*===== Section End : Homepage =====*/
 
+/*===== Section Start : About-us =====*/
+#aboutus-container {
+  height: 80vh;
+  padding: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#aboutus-title {
+  margin-bottom: 5px;
+  font-size: 30px;
+  font-family: Roboto-Bold, Arial, Helvetica, sans-serif;
+}
+
+#aboutus-title-underline {
+  z-index: 3;
+  margin-bottom: 20px;
+  background-color: var(--accent-color1-desaturate);
+  padding: 4px;
+  width: 150px;
+  border-radius: 20px;
+  filter: drop-shadow(5px 5px 0px var(--accent-color2));
+}
+
+#aboutus-description {
+  text-align: center;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+  #aboutus-container {
+    height: 100%;
+    padding: 10vh;
+  }
+}
+/*===== Section End : About-us =====*/
+
 /*===== Section Start : OurTeam =====*/
 #ourTeam-container {
-  margin-top: 140px;
   width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -307,10 +350,14 @@ html {
   margin-right: 50px;
   padding: 20px;
   background-color: var(--background-color1);
-  border-radius: 20px 70px 20px 70px;
-  filter: drop-shadow(0px 0px 2px var(--shadow-color1));
+  border-radius: 10px 30px 10px 30px;
+  filter: drop-shadow(1px 0px 1px var(--shadow-color1));
+  transition: filter 0.3s ease-in;
 }
 
+.ourTeam-card:hover {
+  filter: drop-shadow(1px 0px 2px var(--shadow-color1));
+}
 .ourTeam-card img {
   width: 80px;
   filter: drop-shadow(0px 2px 2px var(--shadow-color1));
@@ -328,6 +375,8 @@ html {
 @media screen and (max-width: 1200px) {
   #ourTeam-container {
     flex-wrap: wrap;
+    height: 100%;
+    margin: 30px 0px 30px 0px;
   }
 
   .ourTeam-card {
@@ -336,3 +385,169 @@ html {
   }
 }
 /*===== Section End : OurTeam =====*/
+
+/*===== Section Start : teamWork =====*/
+#teamWork-container {
+  margin-top: 150px;
+  padding: 150px 50px 50px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color2);
+  background: rgb(38, 38, 41);
+  background: linear-gradient(
+    360deg,
+    rgba(38, 38, 41, 1) 0%,
+    rgba(38, 38, 41, 1) 98%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+
+/*FIRST >> About article*/
+#first-article {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 70%;
+  margin-bottom: 100px;
+}
+
+/*SECOND >> About article*/
+#second-article {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  width: 70%;
+  margin-bottom: 100px;
+  margin-top: 100px;
+}
+
+/*THIRD >> About article*/
+#third-article {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 70%;
+  margin-top: 100px;
+}
+
+/*--- General properties (class) >> AboutUS,  ---*/
+
+.teamWork-title-description-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 45px;
+}
+
+.teamWork-title-description-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 45px;
+}
+
+.teamWork-title {
+  font-size: 34px;
+  font-family: Roboto-Bold;
+}
+
+.teamWork-description {
+  font-size: 16px;
+  padding-top: 40px;
+  font-family: Roboto-Light;
+}
+
+.teamWork-image {
+  width: 450px;
+  object-fit: cover;
+  max-height: 500px;
+  border-radius: 20px;
+  filter: drop-shadow(1px 1px 3px var(--accent-color2));
+}
+
+@media screen and (max-width: 1200px) {
+  #first-article {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  #second-article {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  #third-article {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .teamWork-title-description-right {
+    margin-top: 30px;
+    padding: 0;
+    text-align: center;
+  }
+
+  .teamWork-title-description-left {
+    margin-top: 30px;
+    padding: 0;
+    text-align: center;
+  }
+}
+/*===== Section End : TeamWork =====*/
+
+/*===== Section Start : Figures =====*/
+#figures-container {
+  height: 100vh;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.figure {
+  width: 400px;
+  height: 200px;
+  background-color: var(--accent-color4);
+  padding: 20px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 50px;
+  margin-right: 50px;
+  filter: drop-shadow(0px 1px 1px var(--accent-color2));
+}
+
+.figures-title {
+  font-family: Roboto-Medium;
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+.figures-description {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.figures-explanation {
+  font-size: 14px;
+  color: var(--accent-color2);
+  opacity: 80%;
+}
+
+@media screen and (max-width: 1200px) {
+  #figures-container {
+    flex-direction: column;
+    height: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .figure {
+    margin: 10px 0px 10px 0px;
+  }
+}
+/*===== Section End : Figures =====*/
